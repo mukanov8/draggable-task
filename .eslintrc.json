@@ -1,0 +1,75 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+},
+  "extends": ["plugin:react/recommended","airbnb-typescript", "react-app", "prettier", "plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/eslint-recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "prettier", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      {
+        "ignoreRestArgs": true
+      }
+    ],
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "src/tests/**/*",
+          "**/webpack*"
+        ]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-shadow": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none",
+        "vars": "all"
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+    "object-curly-spacing": ["warn", "always"],
+    "react/destructuring-assignment": "off",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-key": "error",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": "off"
+  }
+}
