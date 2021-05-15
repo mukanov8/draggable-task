@@ -1,6 +1,6 @@
 import React from "react";
 
-const Box = React.memo(() => (
+const Box = () => (
   <div
     className="box"
     style={{
@@ -15,6 +15,6 @@ const Box = React.memo(() => (
   >
     This is a draggable box.
   </div>
-));
+);
 
 export default Box;
