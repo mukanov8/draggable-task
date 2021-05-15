@@ -3,7 +3,7 @@ import Box from './components/Box';
 import Draggable from './components/Draggable';
 
 const App = () => (
-    <div className="App">
+    <div className="app" data-testid="app">
       <Draggable>
         <Box/>
       </Draggable>
