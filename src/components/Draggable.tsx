@@ -32,20 +32,17 @@ const Draggable = React.memo(({ children }) => {
   );
 
   useEffect(() => {
-    const onMouseUp = () => setIsMouseDown(false);
-    window.addEventListener("mouseup", onMouseUp);
-    // return () => {
-    //   window.addEventListener("mouseup", onMouseUp);
-    // };
-  }, []);
-
-  useEffect(() => {
     const onMouseMove = (e: MouseEvent) => handleDragging(e.movementX, e.movementY);
-    if (isMouseDown) window.addEventListener("mousemove", onMouseMove);
+    const onMouseUp = () => setIsMouseDown(false);
 
+    if (isMouseDown) {
+      window.addEventListener("mousemove", onMouseMove);
+      window.addEventListener("mouseup", onMouseUp);
+    }
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
-    };
+      window.removeEventListener("mouseup", onMouseUp);
+    }
   }, [isMouseDown, handleDragging]);
 
   return (
