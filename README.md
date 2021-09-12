@@ -1,9 +1,19 @@
-## Simple Draggable Component 
+# Simple Draggable Component 
 
-Implemented Draggable component without using any external libraries or HTML Drag & Drop API.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c62309d1-ff9c-49cb-8cb0-69ee460b9dc3/deploy-status)](https://app.netlify.com/sites/draggable-task/deploys)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## Available Scripts
+Implemented a simple Draggable component without using any external libraries or HTML Drag & Drop API.
+
+You can see the demo at https://draggable-task.netlify.app/
+
+## Tech stack
+
+- Create React App
+- Typescript
+
+## How to run
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 In the project directory, you can run:
 
